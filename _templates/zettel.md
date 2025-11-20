@@ -1,3 +1,3 @@
-previous:
-next:
-related:
+- previous:
+- next:
+- related:
