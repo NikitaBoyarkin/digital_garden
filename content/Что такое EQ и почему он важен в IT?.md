@@ -3,7 +3,7 @@ prev:
   - "[[00 eq]]"
 next:
 ---
-previous:[[00 eq]]
+- root: [[00 eq]]
 
 ![[../_file/развите навыков EQ.png]]
 
