@@ -9,13 +9,13 @@ import * as Plugin from "./quartz/plugins"
 const config: QuartzConfig = {
   configuration: {
     pageTitle: "EQ in IT",
-    pageTitleSuffix: "",
+    pageTitleSuffix: " · цифровой сад",
     enableSPA: true,
     enablePopovers: true,
     analytics: {
       provider: "plausible",
     },
-    locale: "en-US",
+    locale: "ru",
     baseUrl: "nikitaboyarkin.github.io/digital_garden",
     ignorePatterns: ["private", "templates", ".obsidian", ".DS_Store", ".trash", "*.excalidraw.md"],
     defaultDateType: "modified",
