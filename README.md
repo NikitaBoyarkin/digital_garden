@@ -1,18 +1,55 @@
-# Quartz v4
+# EQ in IT — цифровой сад
 
-> “[One] who works with the door open gets all kinds of interruptions, but [they] also occasionally gets clues as to what the world is and what might be important.” — Richard Hamming
+Цифровой сад на [Quartz v4](https://quartz.jzhao.xyz/) про эмоциональный интеллект (EQ) в IT: самосознание, саморегуляция, эмпатия, социальные навыки.
 
-Quartz is a set of tools that helps you publish your [digital garden](https://jzhao.xyz/posts/networked-thought) and notes as a website for free.
-Quartz v4 features a from-the-ground rewrite focusing on end-user extensibility and ease-of-use.
+Публикуется на GitHub Pages: `https://nikitaboyarkin.github.io/digital_garden`
 
-🔗 Read the documentation and get started: https://quartz.jzhao.xyz/
+## Структура
 
-[Join the Discord Community](https://discord.gg/cRFFHYye7t)
+```
+content/            # заметки (источник сайта)
+  00 eq.md          # хаб: карта ключевых понятий EQ (garden/root)
+  Что такое EQ…md   # статья-введение (garden/trunk)
+  …vs IQ…md         # статья (garden/trunk)
+  …в цифровую эпоху…md  # статья (garden/trunk)
+  Самосознание.md   # компонент EQ (garden/flower)
+  Саморегуляция.md  # компонент EQ (garden/flower)
+  Эмпатия.md        # компонент EQ (garden/flower)
+  Социальные навыки.md  # компонент EQ (garden/flower)
+  index.md          # главная страница
+  _file/            # вложения (картинки)
+quartz.config.ts    # конфиг сайта (baseUrl, тема, плагины)
+quartz.layout.ts    # layout (футер, боковые панели)
+```
 
-## Sponsors
+## Локальный запуск
 
-<p align="center">
-  <a href="https://github.com/sponsors/jackyzha0">
-    <img src="https://cdn.jsdelivr.net/gh/jackyzha0/jackyzha0/sponsorkit/sponsors.svg" />
-  </a>
-</p>
+Требуется Node 20+ (проект собирается на Node 22/24).
+
+```bash
+npm ci
+npx quartz build --serve      # превью на http://localhost:8080
+npx quartz build              # одноразовая сборка в public/
+```
+
+## Деплой
+
+Автоматически через `.github/workflows/deploy.yaml` при пуше в ветку `v4` → GitHub Pages.
+
+```bash
+npx quartz sync                # коммит + пуш (триггерит деплой)
+```
+
+Settings → Pages → Source = "GitHub Actions".
+
+## Конвенции контента
+
+- **Wikilinks (`[[…]]`) — иммутабельны.** Не превращать в `[text](url)`, не удалять.
+- **Frontmatter** каждой заметки: `title`/`description`, один тег `garden/*` (`root` — MOC/хаб, `trunk` — синтез-статья, `flower` — компонент/лист), `aliases` для синонимов.
+- **`prev`/`next`** в YAML — цепочка чтения, оборачивать wikilinks в двойные кавычки: `"[[…]]"`.
+- **Вложения** лежат в `content/_file/`, embed — `![[_file/файл.png]]`. (Корневая папка `_file/` вне `content/` в Quartz не публикуется — хранится для Obsidian.)
+- Черновики: `draft: true` или `publish: false` в frontmatter.
+
+## Связь
+
+Telegram: https://t.me/lofinibo
