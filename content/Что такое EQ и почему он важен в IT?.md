@@ -1,4 +1,7 @@
 ---
+aliases:
+root:
+related:
 description: Зачем эмоциональный интеллект техническому специалисту — soft skills как мультипликатор hard skills в IT.
 tags:
   - garden/trunk

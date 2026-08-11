@@ -1,4 +1,9 @@
 ---
+aliases:
+root:
+next:
+prev:
+related:
 title: EQ in IT
 description: Цифровой сад про эмоциональный интеллект в IT — самосознание, саморегуляция, эмпатия, социальные навыки.
 tags:

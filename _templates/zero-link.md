@@ -1,4 +1,14 @@
+---
+aliases:
+description:
+tags:
+root:
+next:
+prev:
+related:
+---
 previous:
 next:
-# zero-link
+related:
+# root
 - 

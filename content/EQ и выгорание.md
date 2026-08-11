@@ -1,4 +1,9 @@
 ---
+aliases:
+root:
+next:
+prev:
+related:
 description: Как эмоциональный интеллект помогает распознавать и предупреждать выгорание в IT.
 tags:
   - garden/trunk

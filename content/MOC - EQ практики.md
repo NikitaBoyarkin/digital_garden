@@ -1,7 +1,12 @@
 ---
+root:
+next:
+prev:
+related:
 description: Карта практических упражнений для развития каждого компонента EQ.
 aliases:
   - EQ practices
+  - moc
 tags:
   - garden/root
 ---

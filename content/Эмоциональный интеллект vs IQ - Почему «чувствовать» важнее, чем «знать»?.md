@@ -1,4 +1,6 @@
 ---
+root:
+related:
 aliases:
 tags:
   - garden/trunk
