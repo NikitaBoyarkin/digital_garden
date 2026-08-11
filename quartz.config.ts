@@ -12,9 +12,6 @@ const config: QuartzConfig = {
     pageTitleSuffix: " · цифровой сад",
     enableSPA: true,
     enablePopovers: true,
-    analytics: {
-      provider: "plausible",
-    },
     locale: "ru-RU",
     baseUrl: "nikitaboyarkin.github.io/digital_garden",
     ignorePatterns: ["private", "templates", ".obsidian", ".DS_Store", ".trash", "*.excalidraw.md"],
