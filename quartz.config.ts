@@ -15,7 +15,7 @@ const config: QuartzConfig = {
     analytics: {
       provider: "plausible",
     },
-    locale: "ru",
+    locale: "ru-RU",
     baseUrl: "nikitaboyarkin.github.io/digital_garden",
     ignorePatterns: ["private", "templates", ".obsidian", ".DS_Store", ".trash", "*.excalidraw.md"],
     defaultDateType: "modified",
