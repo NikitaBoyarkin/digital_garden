@@ -1,0 +1,41 @@
+.navbar {
+  width: 100%;
+  border-bottom: 1px solid var(--lightgray);
+  padding-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
+
+  & ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem 1.25rem;
+  }
+
+  & a {
+    color: var(--secondary);
+    font-family: var(--headerFont);
+    font-weight: 500;
+    font-size: 0.92rem;
+    text-decoration: none;
+    opacity: 0.82;
+    transition: opacity 0.15s ease;
+  }
+
+  & a:hover {
+    opacity: 1;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .navbar ul {
+    gap: 0.3rem 0.9rem;
+  }
+  .navbar a {
+    font-size: 0.86rem;
+  }
+}
