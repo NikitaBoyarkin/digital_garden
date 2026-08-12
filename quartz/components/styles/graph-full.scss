@@ -1,0 +1,21 @@
+.graph-full {
+  margin: 1.5rem 0 2rem;
+
+  // Hide the small "Граф" label — the page has its own heading.
+  & > .graph > h3 {
+    display: none;
+  }
+
+  // Make the local graph container full-height on the dedicated graph page.
+  & > .graph > .graph-outer {
+    height: 70vh;
+    min-height: 420px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .graph-full > .graph > .graph-outer {
+    height: 55vh;
+    min-height: 320px;
+  }
+}

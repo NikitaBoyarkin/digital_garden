@@ -16,6 +16,7 @@ const config: QuartzConfig = {
     baseUrl: "nikitaboyarkin.github.io/digital_garden",
     ignorePatterns: ["private", "templates", ".obsidian", ".DS_Store", ".trash", "*.excalidraw.md"],
     defaultDateType: "modified",
+    analytics: null,
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,

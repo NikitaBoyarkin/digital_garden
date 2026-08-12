@@ -9,6 +9,8 @@
 ```
 content/            # заметки (источник сайта)
   00 eq.md          # хаб: карта ключевых понятий EQ (garden/root)
+  MOC - EQ практики.md          # практика EQ (garden/root)
+  MOC - Продуктовая аналитика.md  # 2-й хаб: аналитика (garden/root)
   Что такое EQ…md   # статья-введение (garden/trunk)
   …vs IQ…md         # статья (garden/trunk)
   …в цифровую эпоху…md  # статья (garden/trunk)
@@ -16,11 +18,23 @@ content/            # заметки (источник сайта)
   Саморегуляция.md  # компонент EQ (garden/flower)
   Эмпатия.md        # компонент EQ (garden/flower)
   Социальные навыки.md  # компонент EQ (garden/flower)
+  Разбор - *.md     # разборы кейсов (garden/fruit, draft)
+  С чего начать.md  # onboarding-маршрут (garden/trunk)
+  Обо мне.md        # страница автора (garden/leaf)
+  graph.md          # полноэкранный граф-указатель (garden/leaf)
   index.md          # главная страница
   _file/            # вложения (картинки)
-quartz.config.ts    # конфиг сайта (baseUrl, тема, плагины)
-quartz.layout.ts    # layout (футер, боковые панели)
+quartz.config.ts    # конфиг сайта (baseUrl, тема, плагины, analytics)
+quartz.layout.ts    # layout (navbar, футер, боковые панели, граф)
+quartz/components/Navbar.tsx     # верхняя навигация
+quartz/components/GraphFull.tsx   # полноэкранный граф на /graph
 ```
+
+## Навигация
+
+- Верхний navbar (главная / С чего начать / Темы / Граф / Обо мне / Telegram) — `Navbar.tsx`.
+- Полноэкранный интерактивный граф на `/graph` — `GraphFull.tsx` (рендерится через `ConditionalRender` только на этой странице; на остальных страницах граф остаётся в правой панели).
+- Внутренние ссылки navbar относительные (`pathToRoot`) — корректно работают под подпутём GitHub Pages.
 
 ## Локальный запуск
 
